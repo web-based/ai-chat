@@ -20,9 +20,9 @@ function SideBar() {
         <img
           onClick={() => signOut()}
           src={session.user?.image!}
-          alt="Profile_picture"
+          alt="profile"
           className="h-12 w-12 rouded-full cursor-pointer mx-auto mb-2 hover:opacity-50" />
-          )}
+      )}
     </div>
   );
 }
