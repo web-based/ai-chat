@@ -41,3 +41,4 @@ next-env.d.ts
 .vscode
 
 serviceAccountKey.json
+firebase.js
