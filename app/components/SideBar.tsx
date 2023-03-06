@@ -41,11 +41,13 @@ function SideBar() {
       </div>
 
       {session && (
+        <abbr title="Sign Out">
         <img
           onClick={() => signOut()}
           src={session.user?.image!}
           alt="profile"
-          className="h-12 w-12 rouded-full cursor-pointer mx-auto mb-2 hover:opacity-50" />
+          className="h-12 w-12 rouded-full cursor-pointer mx-auto mb-2 hover:opacity-50 " />
+          </abbr>
       )}
     </div>
   );
