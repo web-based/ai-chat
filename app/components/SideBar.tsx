@@ -7,13 +7,20 @@ import ChatRow from "./ChatRow";
 import { collection, orderBy, query } from "firebase/firestore";
 import ModelSelection from "./ModelSelection";
 
+
+
 function SideBar() {
+  
+
   const { data: session } = useSession();
   const [chats, loading, error] = useCollection(
     session && query(
       collection(db, 'users', session?.user?.email!, 'chats'),
       orderBy('createdAt', 'asc'))
   );
+
+  
+
   return (
     <div className="p-2 flex flex-col h-screen">
       <div className="flex-1 ">
@@ -38,7 +45,12 @@ function SideBar() {
           </div>
 
         </div>
+        
+    
       </div>
+        
+      <hr />
+      <div className="mt-4">
 
       {session && (
         <abbr title="Sign Out">
@@ -48,7 +60,8 @@ function SideBar() {
           alt="profile"
           className="h-12 w-12 rouded-full cursor-pointer mx-auto mb-2 hover:opacity-50 " />
           </abbr>
-      )}
+        )}
+        </div>
     </div>
   );
 }
