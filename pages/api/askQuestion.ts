@@ -1,7 +1,8 @@
 import query from 'lib/queryApi'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import admin from "firebase-admin"
-import {adminDb }from "firebaseAdmin"
+import { adminDb } from "firebaseAdmin"
+import chatgpt_icon from 'public/openai_icon.png'
 
 type Data = {
   answer: string;
@@ -33,7 +34,7 @@ export default async function handler(
     user: {
       _id: "ChatGPT",
       name: "ChatGPT",
-      avatar: "https://links.papareact.com/89k",
+      avatar: "https://i.ibb.co/mqrfTvK/openai-icon.png",
     }
   };
 
