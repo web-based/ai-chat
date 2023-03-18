@@ -67,13 +67,15 @@ function ChatInput({ chatId }: Props) {
   };
 
   return (
-    <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm mb-8">
-      <form onSubmit={sendMessage} className="p-5 space-x-5 flex">
+    <div className='bg-[#35363f] h-[170px]'>
+    <div className="bg-gray-700/50 text-gray-400 rounded-lg text-sm mr-2 ml-2">
+      <form onSubmit={sendMessage} className="p-5 space-x-5 flex mt-[2.8rem] ">
         <input
           className="bg-transparent focus:outline-none flex-1 disabled:cursor-not-allowed disabled:text-gray-300"
           disabled={!session}
           value={prompt}
-          type="text"
+            type="text"
+            onFocus={focus}
           onChange={(e) => setPrompt(e.target.value)}
           placeholder="Type your message here..." />
         <button
@@ -87,7 +89,8 @@ function ChatInput({ chatId }: Props) {
       <div className='md:hidden'>
         <ModelSelection/>
       </div>
-    </div>
+      </div>
+      </div>
   )
 }
 
