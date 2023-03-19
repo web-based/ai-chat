@@ -4,7 +4,7 @@
 
 @layer components {
   .info_text {
-    @apply p-4 bg-gray-700/50 rounded-lg max-w-[auto] text-sm
+    @apply p-4 bg-gray-700/50 rounded-lg max-w-sm px-2 py-2  
   }
 
   .chat_row {
@@ -13,12 +13,7 @@
     text-gray-300 transition-all duration-200 ease-out
   }
 
-  /* @media screen (min-width: 425px) {
-     .info_text {
-      @apply p-2 bg-gray-700/50 rounded-sm sm:text-xl
-    }
-  
-    
-} */
+   
+ 
 
 }
