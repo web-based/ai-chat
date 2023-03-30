@@ -18,7 +18,7 @@ function ChatInput({ chatId }: Props) {
   const [prompt, setPrompt] = useState("")
   const { data: session } = useSession();
    const { data: model } = useSWR('model', {
-    fallbackData: 'text-davinchi-001'
+    fallbackData: 'text-davinchi-003'
   });
 
 
